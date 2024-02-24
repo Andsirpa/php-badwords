@@ -1,6 +1,9 @@
 <?php
-$text = $_GET['testo']
-$badword = $_GET['badword']
+$text = $_GET['testo'];
+$badword = $_GET['badword'];
+$full_text= $text . $badword;
+
+$text_lenght= strlen($full_text);
 ?>
 
 <!DOCTYPE html>
@@ -18,14 +21,28 @@ $badword = $_GET['badword']
 
 <body>
     <div class="container">
+
         <!-- stampo il paragrafo -->
-        <p>
-            <?php echo $text ?>
-        </p>
+        <div class="container mb-3">
+            <h2>Paragrafo</h2>
+            <p>
+                <?php echo $full_text ?>
+            </p>
+
+            <p>
+                <h3>Lunghezza: </h3>
+                <?= $text_lenght ?>
+            </p>
+
+        </div>
+
         <!-- stampo la badword (secondo metodo) -->
-        <p>
-            <?= $badword ?>
-        </p>
+        <div class="container mb-3">
+            <h2>Badword</h2>
+            <p>
+                <?= $badword ?>
+            </p>
+        </div>
 
     </div>
 </body>
