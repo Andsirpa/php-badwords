@@ -1,10 +1,13 @@
 <?php
 $text = $_GET['testo'];
 $badword = $_GET['badword'];
-$full_text= $text . $badword;
 
 // lunghezza paragrafo
-$text_lenght= strlen($full_text);
+$text_lenght= strlen($text);
+
+// testo censurato
+$censored_text = str_replace($badword, '***', $text);
+$censored_text_lenght = strlen($censored_text)
 
 
 
@@ -29,9 +32,9 @@ $text_lenght= strlen($full_text);
 
         <!-- stampo il paragrafo -->
         <div class="container mb-3">
-            <h2>Paragrafo</h2>
+            <h2>Testo</h2>
             <p>
-                <?php echo $full_text ?>
+                <?php echo $text ?>
             </p>
 
             <p>
@@ -41,12 +44,22 @@ $text_lenght= strlen($full_text);
 
         </div>
 
-        <!-- stampo la badword (secondo metodo) -->
+        <hr>
+
+        <!-- stampo il testo censurato (secondo metodo) -->
         <div class="container mb-3">
-            <h2>Badword</h2>
+            <h2>Testo Censurato</h2>
             <p>
-                <?= $badword ?>
+                <?= $censored_text ?>
+
             </p>
+            
+            <p>
+                <h3>Lunghezza: </h3>
+                <?= $censored_text_lenght ?>
+
+            </p>
+
         </div>
 
     </div>

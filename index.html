@@ -11,22 +11,24 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h1>Hello, world!</h1>
 
         <form action="./result.php" method="GET">
-            <div class="m-3">
+            <div class="mb-3">
                 <label for="testo" class="form-label">Testo</label>
-                <input type="text" class="form-control" id="testo" name="testo" placeholder="Inserisci un testo">
+                <textarea class="form-control" name="testo" id="testo"
+                    rows="4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, amet? Eos placeat atque, beatae blanditiis officia dolores ipsam nemo dolorem inventore excepturi. Veniam ipsa temporibus nulla maiores expedita facilis soluta!</textarea>
             </div>
 
-            <div class="m-3">
+            <div class="mb-3">
                 <label for="badword" class="form-label">Badword</label>
-                <input type="text" class="form-control" id="badword" name="badword" placeholder="Inserisci una badword">
+                <input type="text" class="form-control" id="badword" name="badword" placeholder="Inserisci una badword"
+                    value="dolor">
             </div>
 
-            <div class="col-12 m-3">
-                <button class="btn btn-primary">Invia</button>
+            <div class="col-12 mb-3">
+                <button type="submit" class="btn btn-primary">Invia</button>
             </div>
 
         </form>
