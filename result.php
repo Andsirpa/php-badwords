@@ -3,7 +3,12 @@ $text = $_GET['testo'];
 $badword = $_GET['badword'];
 $full_text= $text . $badword;
 
+// lunghezza paragrafo
 $text_lenght= strlen($full_text);
+
+
+
+
 ?>
 
 <!DOCTYPE html>
